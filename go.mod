@@ -3,12 +3,13 @@ module tot
 go 1.16
 
 require (
-	github.com/gernest/wow v0.1.0 // indirect
-	github.com/google/go-github/v35 v35.2.0 // indirect
-	github.com/google/goterm v0.0.0-20190703233501-fc88cf888a3f // indirect
-	github.com/mattn/go-tty v0.0.3
-	github.com/muesli/termenv v0.8.1 // indirect
-	github.com/nsf/termbox-go v1.1.1 // indirect
-	github.com/valyala/fastjson v1.6.3 // indirect
-	github.com/writeas/go-strip-markdown v2.0.1+incompatible // indirect
+	github.com/ahmetb/go-cursor v0.0.0-20131010032410-8136607ea412 // indirect
+	github.com/gernest/wow v0.1.0
+	github.com/go-redis/redis v6.15.9+incompatible
+	github.com/joho/godotenv v1.3.0
+	github.com/muesli/termenv v0.8.1
+	github.com/nsf/termbox-go v1.1.1
+	github.com/onsi/ginkgo v1.15.0 // indirect
+	github.com/onsi/gomega v1.10.5 // indirect
+	github.com/valyala/fastjson v1.6.3
 )
