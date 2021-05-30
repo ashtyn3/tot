@@ -3,6 +3,7 @@ package ui
 import (
 	"fmt"
 	"os"
+	"regexp"
 	"strconv"
 	"strings"
 	"tot/auth"
@@ -76,6 +77,8 @@ keyPressListenerLoop:
 					w.Start()
 					text := search(w)
 					text = strings.Replace(text, "\"", "", -1)
+					reg := regexp.MustCompile(`[^\x00-\x7F]`)
+					text = string(reg.ReplaceAll([]byte(text), []byte(" ")))
 					if len(text) > 250 {
 						text = text[:170]
 					}
