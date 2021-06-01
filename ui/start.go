@@ -69,7 +69,7 @@ keyPressListenerLoop:
 				break keyPressListenerLoop
 			default:
 
-				if strings.ToLower(string(ev.Ch)) == "f" {
+				if strings.ToLower(string(ev.Ch)) == "g" {
 					cursor.MoveTo(0, 0)
 					term.Close()
 					termenv.AltScreen()
@@ -85,10 +85,17 @@ keyPressListenerLoop:
 					Run(text)
 					break keyPressListenerLoop
 				}
-				if strings.ToLower(string(ev.Ch)) == "j" {
+				if strings.ToLower(string(ev.Ch)) == "l" {
 					cursor.MoveTo(0, 0)
 					fmt.Println()
 					db.Get().Print()
+				}
+				if strings.ToLower(string(ev.Ch)) == "h" {
+					cursor.MoveTo(0, 0)
+					fmt.Println()
+					fmt.Println(termenv.String("h").Bold().String() + ": Shows help text")
+					fmt.Println(termenv.String("g").Bold().String() + ": Opens new typeracing game")
+					fmt.Println(termenv.String("l").Bold().String() + ": Shows leaderboard")
 				}
 			}
 		case term.EventError:
